@@ -1,0 +1,33 @@
+int a = 0, b = 1, c = 0;
+            Console.WriteLine("====================================");
+            Console.Write("      Sequência de Fibonacci ");
+            Console.WriteLine("\n====================================");
+
+            Console.Write("\nInforme o número para buscar: ");
+            int sequencia = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= sequencia; i++)
+            {
+                if (i < sequencia)
+                {
+                    Console.Write(a + ",");
+                }
+                else
+                {
+                    Console.Write(a + "...");
+                }
+
+                c = a + b;
+                b = a;
+                a = c;
+
+            }
+            if (sequencia == a)
+            {
+                Console.Write($"\nO número digitado {sequencia} pertence a Fibonacci.");
+            }
+            else if (sequencia != a)
+            {
+                Console.Write($"\nO número digitado {sequencia} não pertence a Fibonacci.");
+            }
+            Console.ReadKey();
